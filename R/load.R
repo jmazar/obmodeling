@@ -1,4 +1,3 @@
-Sys.setenv(TZ="America/Chicago")
 loadquote <- function(filename) {
   .ob <- new.env()
   raw.csv <- read.csv(filename)
@@ -11,11 +10,5 @@ loadquote <- function(filename) {
   names(xts.data) <- names(symbols)
   xts.data
 }
-# function to load csv into quote data
- # how to indicate multiple book levels? pass an argument or i should be able to figure it out
- # should the xts object be in same format?
-# different one for trade data
 
-a <- loadquote("test.csv")
 
-a$ESH6
