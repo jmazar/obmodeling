@@ -1,5 +1,7 @@
+
 loadquote <- function(filename) {
-  .ob <- new.env()
+  if(!is.environment(.ob))
+    .ob <<- new.env()
   raw.csv <- read.csv(filename)
   symbols <- split(raw.csv, raw.csv$X.RIC)
   xts.data <- lapply(symbols, function(x) {
@@ -8,7 +10,11 @@ loadquote <- function(filename) {
     xts(x[, 6:ncol(x)], order.by=time)
   })
   names(xts.data) <- names(symbols)
-  xts.data
+  for(symbol in names(xts.data)) {
+    .ob[[symbol]]$quotes <- new.env()
+    .ob[[symbol]]$quotes <- xts.data[[symbol]]
+  }
 }
+
 
 
