@@ -1,16 +1,17 @@
-Package: mypackage
-Title: What The Package Does (one line, title case required)
+Package: obmodeling
+Type: Package
+Title: Modeling, Analysis, and Graphics of Limit Order Book Data
 Version: 0.1
-Authors@R: person("Jeffrey", "Mazar", email = "jeffrey.mazar@gmail.com",
-                  role = c("aut", "cre")),
-           person("Brian", "Peterson", email = "brian@braverock.com",
-                  role = c("aut"))
-Description: The obmodeling package is designed to allow for modeling of order book features 
-and dynamics based on L1 and L2 data.  It includes analytical methods and
-graphiocs drawns from the microstructure literature and aims to be useful both
-for academics and working professionals.
+Authors@R: c(
+      person("Jeffrey", "Mazar", email = "jeffrey.mazar@gmail.com", role = c("cre", "aut"))
+      , person("Brian", "Peterson", email = "brian@braverock.com",role = c("aut"))
+    )
+Description: 
+    The obmodeling package is designed to allow for modeling of order book
+    features and dynamics based on L1 and L2 data.  It includes analytical
+    methods and graphics drawns from the microstructure literature and aims
+    to be useful both for academics and working professionals.
 Depends: R (>= 3.3.0)
-Imports: 
-        xts
+Imports: xts
 License: GPL-2
 LazyData: true
