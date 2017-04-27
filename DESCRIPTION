@@ -2,16 +2,24 @@ Package: obmodeling
 Type: Package
 Title: Modeling, Analysis, and Graphics of Limit Order Book Data
 Version: 0.1
+Url: https://github.com/jmazar/obmodeling
 Authors@R: c(
-      person("Jeffrey", "Mazar", email = "jeffrey.mazar@gmail.com", role = c("cre", "aut"))
-      , person("Brian", "Peterson", email = "brian@braverock.com",role = c("aut"))
+      person(given="Jeffrey", family="Mazar", email="jeffrey.mazar@gmail.com", role=c("cre", "aut"))
+      , person(given="Brian G.", family="Peterson", email="brian@braverock.com",role=c("aut"))
     )
 Description: 
     The obmodeling package is designed to allow for modeling of order book
     features and dynamics based on L1 and L2 data.  It includes analytical
-    methods and graphics drawns from the microstructure literature and aims
-    to be useful both for academics and working professionals.
+    methods and graphics drawn from the microstructure literature and aims
+    to be useful for both professional and academic researchers.
 Depends: R (>= 3.3.0)
-Imports: xts
+Imports: 
+    xts
+    , zoo
+    , FinancialInstrument
+    , fasttime
+    , utils
 License: GPL-2
+Roxygen: list(markdown = TRUE)
 LazyData: true
+RoxygenNote: 6.0.1

@@ -1,13 +1,14 @@
-
-loadquote <- function(filename) {
-  if(!is.environment(.ob))
-    .ob <<- new.env()
-  raw.csv <- read.csv(filename)
-  symbols <- split(raw.csv, raw.csv$X.RIC)
+#' @rdname load.trades
+load.quotes <- function(filename, symbol.col='X.RIC', tz='GMT' , format="%d-%b-%Y %H:%M:%OS", ...) {
+  .ob <- getOB()
+  raw.csv <- read.csv(filename, ...=...)
+  symbols <- split(raw.csv, raw.csv[,symbol.col])
   xts.data <- lapply(symbols, function(x) {
     tmp <- paste(x$Date.G., x$Time.G.)
-    time <- as.POSIXct(tmp, tz=paste0("Etc/GMT", x$GMT.Offset[1]), format="%d-%b-%Y %H:%M:%OS")
-    xts(x[, 6:ncol(x)], order.by=time)
+    time <- as.POSIXct(tmp, tz=tz, format=format)
+    out <- xts(x[, 6:ncol(x)], order.by=time)
+    class(out) <- c('ob.quotes','xts','zoo')
+    out
   })
   names(xts.data) <- names(symbols)
   for(symbol in names(xts.data)) {
@@ -15,6 +16,3 @@ loadquote <- function(filename) {
     .ob[[symbol]]$quotes <- xts.data[[symbol]]
   }
 }
-
-
-

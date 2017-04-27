@@ -39,11 +39,13 @@
 #   timeDF=timeDF[,c('VPIN')]; return(timeDF)
 # }
 # out=VPIN(stock,50)
-source('R/load_trades.R')
-require(data.table); require(fasttime); require(plyr)
-load.trades("data/trades.csv")
+#source('R/load_trades.R')
+#require(data.table); require(fasttime); require(plyr)
+#load.trades("data/trades.csv")
 vpin <- function(symbol, bucket.size) {
+  .ob <- getOB()
   trades <- .ob[[symbol]]$trades
+  if(is.null(trades)) stop('no trades found for ',symbol)
   trades$dP1 <- diff(trades$Price, lag=1, diff=1, na.pad=TRUE)
   ends <- endpoints(trades,'seconds')
   timeDF <- period.apply(trades$dP1,INDEX=ends,FUN=sum)
@@ -60,7 +62,8 @@ vpin <- function(symbol, bucket.size) {
   timeDF[1,'Vtick'] <- 0
   timeDF <- as.data.frame(timeDF)
   timeDF[,'DateTime']=row.names(timeDF)
-  timeDF <- ddply(as.data.frame(timeDF),.(Vtick),last)
+  ## FIXME remove ddply
+#  timeDF <- ddply(as.data.frame(timeDF),.(Vtick),last)
   timeDF <- as.xts(timeDF[,c('Volume','dP2','Vtick')],
                 order.by=fastPOSIXct(timeDF$DateTime,tz='GMT'))
   timeDF[1,'dP2'] <- 0
@@ -73,6 +76,3 @@ vpin <- function(symbol, bucket.size) {
   timeDF <-timeDF[,c('VPIN')]
   return(timeDF)
 }
-
-vpin("ESH6", 1)
-

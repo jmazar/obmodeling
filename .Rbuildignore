@@ -1,0 +1,4 @@
+sandbox
+generatechangelog\.sh
+^.*\.Rproj$
+^\.Rproj\.user$

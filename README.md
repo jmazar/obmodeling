@@ -2,12 +2,12 @@
 
 The obmodeling package is designed to allow for modeling of order book features 
 and dynamics based on L1 and L2 data.  It includes analytical methods and
-graphiocs drawns from the microstructure literature and aims to be useful both
-for academics and working professionals.
+graphiocs drawn from the microstructure literature and aims to be useful both
+for professional and academic researchers.
 
 # Details
 
-This is and *R* package which uses **xts** time series objects to manipulate and 
+This is an **R** package which uses *xts* time series objects to manipulate and 
 analyze:
 
 - Depth of the market at a given time
@@ -33,14 +33,14 @@ analyze:
 # References
 
 
-Cartea, Penalva, Jaimungal. 2015. **Algorithmic and High-Frequency Trading**. Cambridge.
+Cartea, Penalva, Jaimungal. 2015. *Algorithmic and High-Frequency Trading*. Cambridge.
 
-Easley, López de Prado, D. 2012. “Flow Toxicity and Liquidity in a High-Frequency World.” **Review of Financial Studies** 25 (5): 1456–93.
+Easley, López de Prado, D. 2012. “Flow Toxicity and Liquidity in a High-Frequency World.” *Review of Financial Studies* 25 (5): 1456–93.
 
-Easley, O’Hara, D. 1996. “Liquidity, Information, and Infrequently Traded Stocks.” **The Journal of Finance**. 2 51 (4): 1405–36.
+Easley, O’Hara, D. 1996. “Liquidity, Information, and Infrequently Traded Stocks.” *The Journal of Finance*. 2 51 (4): 1405–36.
 
-Hendershot, Menkveld. 2014. “Price Pressures.” **Journal of Financial Econometrics** 114: 405–23.
+Hendershot, Menkveld. 2014. “Price Pressures.” *Journal of Financial Econometrics* 114: 405–23.
 
-Jong, Rindi de. 2009. **The Microstructure of Financial Markets**. Cambridge.
+Jong, Rindi de. 2009. *The Microstructure of Financial Markets*. Cambridge.
 
 Rama Cont, Sasha Stoikov, Arseniy Kukanov. 2011. “The Price Impact of Order Book Events.” **ArXiv**.
