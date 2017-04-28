@@ -27,3 +27,13 @@ load.trades <- function(filename, symbol.col='X.RIC', tz='GMT' , format="%d-%b-%
     .ob[[symbol]]$trades <- xts.data[[symbol]]
   }
 }
+
+###############################################################################
+# obmodeling: Parsing, analysis, visualization of L1 and L2 order book data
+# Copyright (c) 2017- Jeffrey Mazar and Brian G. Peterson
+#
+# This library is distributed under the terms of the GNU Public License (GPL)
+# for full details see https://www.gnu.org/licenses/licenses.en.html
+#
+###############################################################################
+

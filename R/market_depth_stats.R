@@ -26,3 +26,13 @@ market.depth.stats <- function(symbol, on) {
       "Ask.Mean", "Ask.Sd", "Ask.P01", "Ask.P25", "Ask.P50", "Ask.P75", "Ask.P99")
   stats
 }
+
+###############################################################################
+# obmodeling: Parsing, analysis, visualization of L1 and L2 order book data
+# Copyright (c) 2017- Jeffrey Mazar and Brian G. Peterson
+#
+# This library is distributed under the terms of the GNU Public License (GPL)
+# for full details see https://www.gnu.org/licenses/licenses.en.html
+#
+###############################################################################
+

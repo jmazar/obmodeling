@@ -19,3 +19,13 @@ trade.size.stats <- function(symbol, on) {
   colnames(stats) <- c("Trade.Mean", "Trade.Sd", "Trade.P01", "Trade.P25", "Trade.P50", "Trade.P75", "Trade.P99")
   stats
 }
+
+###############################################################################
+# obmodeling: Parsing, analysis, visualization of L1 and L2 order book data
+# Copyright (c) 2017- Jeffrey Mazar and Brian G. Peterson
+#
+# This library is distributed under the terms of the GNU Public License (GPL)
+# for full details see https://www.gnu.org/licenses/licenses.en.html
+#
+###############################################################################
+
