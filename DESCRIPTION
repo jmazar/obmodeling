@@ -7,13 +7,13 @@ Authors@R: c(
       person(given="Jeffrey", family="Mazar", email="jeffrey.mazar@gmail.com", role=c("cre", "aut"))
       , person(given="Brian G.", family="Peterson", email="brian@braverock.com",role=c("aut"))
     )
-Description: 
+Description:
     The obmodeling package is designed to allow for modeling of order book
     features and dynamics based on L1 and L2 data.  It includes analytical
     methods and graphics drawn from the microstructure literature and aims
     to be useful for both professional and academic researchers.
 Depends: R (>= 3.3.0)
-Imports: 
+Imports:
     xts
     , zoo
     , FinancialInstrument
@@ -23,3 +23,9 @@ License: GPL-3
 Roxygen: list(markdown = TRUE)
 LazyData: true
 RoxygenNote: 6.0.1
+Suggests: 
+    knitr
+    , rmarkdown
+    , PerformanceAnalytics
+    , highfrequency
+VignetteBuilder: knitr
