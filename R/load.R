@@ -1,4 +1,5 @@
 #' @rdname load.trades
+#' @export
 load.quotes <- function(filename, symbol.col='X.RIC', tz='GMT' , format="%d-%b-%Y %H:%M:%OS", ...) {
   .ob <- getOB()
   raw.csv <- read.csv(filename, ...=...)
