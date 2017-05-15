@@ -1,6 +1,6 @@
 ---
 title: "Introduction to obmodeling"
-author: "Jeffery Mazar and Brian G. Peterson"
+author: "Jeffrey Mazar and Brian G. Peterson"
 date: "`r Sys.Date()`"
 output: ioslides_presentation
 vignette: >
@@ -49,8 +49,9 @@ analyze:
 
 ```{r testdata, echo=TRUE}
 
-# load the data here
+# load the data here, ob_trades & ob_quotes
 
+load.quotes(system.file('extdata/ob_quotes.csv',package = 'obmodeling'))
 
 ```
 
