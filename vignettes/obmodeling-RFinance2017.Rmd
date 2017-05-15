@@ -1,0 +1,77 @@
+---
+title: "Introduction to obmodeling"
+author: "Jeffery Mazar and Brian G. Peterson"
+date: "`r Sys.Date()`"
+output: ioslides_presentation
+vignette: >
+  %\VignetteIndexEntry{Introduction to obmodeling}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+# setup block that doesn't show up in the output
+knitr::opts_chunk$set(echo = FALSE)
+#knitr::opts_chunk$set(cache = TRUE)
+require(obmodeling)
+require(quantstrat)
+require(knitr)
+require(pander)
+panderOptions("digits", 2)
+```
+
+## Introduction
+
+This is an **R** package which uses *xts* time series objects to manipulate and 
+analyze:
+
+- Depth of the market at a given time
+
+- Volume
+
+- Price movement through the day
+
+- Weighted Midpoint (Cartea 2015)
+
+- Market spread (Jong 2009, 91–96)
+
+- Measures of liquidity (Cartea 2015)
+
+- Measures of volatility (Jong 2009, 92; Cartea 2015)
+
+- PIT/VPIT (O. Easley D. 1996; L. de P. Easley D. 2012)
+
+- Price pressure (Hendershot 2014; Rama Cont 2011)
+
+- Trade imbalance (Rama Cont 2011)
+
+## Setup
+
+```{r testdata, echo=TRUE}
+
+# load the data here
+
+
+```
+
+## Visualize  Order Book
+
+```{r, echo=TRUE, results='asis'}
+
+chart.depth('ESH6')
+
+```
+
+## Pretty Pictures 2
+
+
+
+## Pretty Pictures 3
+
+
+
+## Thanks
+
+
+#References
+
