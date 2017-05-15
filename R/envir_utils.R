@@ -42,7 +42,7 @@ getOB <- function(ob=NULL, envir=NULL){
   if(is.null(envir)){
     envir <- .obstate$envir
   }
-  if(!is.environment(ob) && !is.environment(get(x=ob, envir=envir))) {
+  if(!is.environment(ob) && !is.environment(envir[[ob]])) {
     newOB(ob=ob, envir=envir)
   }
   get(ob, pos=envir)
