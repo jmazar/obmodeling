@@ -20,6 +20,7 @@ load.trades <- function(filename, symbol.col='X.RIC', tz='GMT' , format="%d-%b-%
     time <- as.POSIXct(tmp, tz=tz, format=format)
     out <- xts(x[, 6:7], order.by=time)
     class(out) <- c('ob.trades','xts','zoo')
+    out
   })
   names(xts.data) <- names(symbol.list)
   for(symbol in names(xts.data)) {
