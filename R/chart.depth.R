@@ -49,12 +49,13 @@ chart.depth <- function(symbol, timestamp, offset=TRUE) {
   prices <- as.numeric(colnames(quote.sizes))
 
   # Vertical histogram
-  plot (NA, type='n', axes=FALSE, yaxt='n',
+  plot (NA, type='n', axes=FALSE,
         xlab='Quantity', ylab='Price',
         main=paste0('Depth for ',symbol),
         xlim=c(mq,max(quote.sizes)),
         ylim=c(min(prices),max(prices)))
   axis (1)
+  axis (2, las=2)
   arrows(rep(0,ncol(quote.sizes)),prices,
          quote.sizes,prices,
          length=0,angle=0)
