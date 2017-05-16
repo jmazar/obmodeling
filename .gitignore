@@ -26,3 +26,6 @@ vignettes/*.pdf
 *.knit.md
 .Rproj.user
 inst/doc
+*.bak
+*.sav
+vignettes/*.R

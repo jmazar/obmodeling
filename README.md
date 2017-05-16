@@ -26,9 +26,9 @@ analyze:
 
 - PIT/VPIT (O. Easley D. 1996; L. de P. Easley D. 2012)
 
-- Price pressure (Hendershot 2014; Rama Cont 2011)
+- Price pressure (Hendershot 2014; Cont 2014)
 
-- Trade imbalance (Rama Cont 2011)
+- Trade imbalance (Cont 2014)
 
 # References
 
@@ -43,4 +43,4 @@ Hendershot, Menkveld. 2014. “Price Pressures.” *Journal of Financial Econome
 
 Jong, Rindi de. 2009. *The Microstructure of Financial Markets*. Cambridge.
 
-Rama Cont, Sasha Stoikov, Arseniy Kukanov. 2011. “The Price Impact of Order Book Events.” **ArXiv**.
+Rama Cont, Sasha Stoikov, Arseniy Kukanov. 2014. “The Price Impact of Order Book Events.” Journal of Financial Econometrics. 12, 47-88.
