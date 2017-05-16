@@ -24,12 +24,12 @@ and analyze:
 \item Volume
 \item Price movement through the day
 \item Weighted Midpoint (Cartea 2015)
-\item Market spread (Jong 2009, 91–96)
+\item Market spread (de Jong 2009, 91–96)
 \item Measures of liquidity (Cartea 2015)
 \item Measures of volatility (Jong 2009, 92; Cartea 2015)
-\item PIT/VPIT (O. Easley D. 1996; L. de P. Easley D. 2012)
-\item Price pressure (Hendershot 2014; Rama Cont 2011)
-\item Trade imbalance (Rama Cont 2011)
+\item PIN/VPIN (O. Easley D. 1996; L. de P. Easley D. 2012)
+\item Price pressure (Hendershot 2014; Cont 2011)
+\item Trade imbalance (Cont 2011)
 }
 }
 \references{

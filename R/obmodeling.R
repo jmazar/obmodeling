@@ -16,17 +16,17 @@
 #'
 #' - Weighted Midpoint (Cartea 2015)
 #'
-#' - Market spread (Jong 2009, 91–96)
+#' - Market spread (de Jong 2009, 91–96)
 #'
 #' - Measures of liquidity (Cartea 2015)
 #'
 #' - Measures of volatility (Jong 2009, 92; Cartea 2015)
 #'
-#' - PIT/VPIT (O. Easley D. 1996; L. de P. Easley D. 2012)
+#' - PIN/VPIN (O. Easley D. 1996; L. de P. Easley D. 2012)
 #'
-#' - Price pressure (Hendershot 2014; Rama Cont 2011)
+#' - Price pressure (Hendershot 2014; Cont 2011)
 #'
-#' - Trade imbalance (Rama Cont 2011)
+#' - Trade imbalance (Cont 2011)
 #'
 #' @references
 #'
