@@ -2,7 +2,10 @@
 title: "Introduction to obmodeling"
 author: "Jeffrey Mazar and Brian G. Peterson"
 date: "`r Sys.Date()`"
-output: ioslides_presentation
+output: 
+  ioslides_presentation:
+    df_print: kable
+bibliography: obmodeling.bib
 vignette: >
   %\VignetteIndexEntry{Introduction to obmodeling}
   %\VignetteEngine{knitr::rmarkdown}
@@ -22,28 +25,22 @@ panderOptions("digits", 2)
 
 ## Introduction
 
-This is an **R** package which uses *xts* time series objects to manipulate and 
+obmodeling is an **R** package which uses *xts* time series objects to manipulate and 
 analyze:
 
 - Depth of the market at a given time
 
-- Volume
+- Price movement, liquidity changes [@Cartea2015]
 
-- Price movement through the day
+- Market spread [@DeJong2009, pp. 91–96]
 
-- Weighted Midpoint (Cartea 2015)
+- Measures of volatility [@DeJong2009 p. 92, and @Cartea2015]
 
-- Market spread (Jong 2009, 91–96)
+- PIN/VPIN [@Easley1996, @Easley2012a]
 
-- Measures of liquidity (Cartea 2015)
+- Price pressure [@Hendershott2014, @Cont2014]
 
-- Measures of volatility (Jong 2009, 92; Cartea 2015)
-
-- PIT/VPIT (O. Easley D. 1996; L. de P. Easley D. 2012)
-
-- Price pressure (Hendershot 2014; Rama Cont 2011)
-
-- Trade imbalance (Rama Cont 2011)
+- Trade imbalance [@Cont2014]
 
 ## Setup
 
@@ -52,12 +49,17 @@ analyze:
 # load the data here, ob_trades & ob_quotes
 
 load.quotes(system.file('extdata/ob_quotes.csv',package = 'obmodeling'))
+load.trades(system.file('extdata/ob_trades.csv',package = 'obmodeling'))
+
 
 ```
 
-## Visualize  Order Book
+- *obmodeling* uses an environment to store parsed trades and quotes
+- you can access that environment via `getOB()`
 
-```{r, echo=TRUE, results='asis'}
+## Visualize Order Book
+
+```{r, echo=TRUE, message=FALSE}
 
 chart.depth('ESH6')
 
@@ -73,6 +75,14 @@ chart.depth('ESH6')
 
 ## Thanks
 
+**Thank You for Your Attention**
 
-#References
+find it on github at:  https://github.com/jmazar/obmodeling
 
+install via:
+
+`install_github('jmazar/obmodeling')`
+
+Patches and contributions welcome!
+
+## References {.smaller}
