@@ -5,9 +5,7 @@ date: '`r Sys.Date()`'
 output:
   ioslides_presentation:
     df_print: kable
-    self_contained: no
-  beamer_presentation: default
-  slidy_presentation: default
+    widescreen: yes
 bibliography: obmodeling.bib
 vignette: |
   %\VignetteIndexEntry{Introduction to obmodeling} %\VignetteEngine{knitr::rmarkdown} %\VignetteEncoding{UTF-8}
@@ -39,8 +37,6 @@ analyze:
 - Measures of volatility [@DeJong2009 p. 92, and @Cartea2015]
 
 - PIN/VPIN [@Easley1996, @Easley2012a]
-
-## Introduction
 
 - Price pressure [@Hendershott2014, @Cont2014]
 
