@@ -1,15 +1,16 @@
 ---
 title: "Introduction to obmodeling"
 author: "Jeffrey Mazar and Brian G. Peterson"
-date: "`r Sys.Date()`"
-output: 
+date: '`r Sys.Date()`'
+output:
   ioslides_presentation:
     df_print: kable
+    self_contained: no
+  beamer_presentation: default
+  slidy_presentation: default
 bibliography: obmodeling.bib
-vignette: >
-  %\VignetteIndexEntry{Introduction to obmodeling}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+vignette: |
+  %\VignetteIndexEntry{Introduction to obmodeling} %\VignetteEngine{knitr::rmarkdown} %\VignetteEncoding{UTF-8}
 ---
 
 ```{r setup, include=FALSE}
@@ -21,6 +22,7 @@ require(quantstrat)
 require(knitr)
 require(pander)
 panderOptions("digits", 2)
+Sys.setenv(TZ='GMT')
 ```
 
 ## Introduction
@@ -28,7 +30,7 @@ panderOptions("digits", 2)
 obmodeling is an **R** package which uses *xts* time series objects to manipulate and 
 analyze:
 
-- Depth of the market at a given time
+- Market depth statistics
 
 - Price movement, liquidity changes [@Cartea2015]
 
@@ -37,6 +39,8 @@ analyze:
 - Measures of volatility [@DeJong2009 p. 92, and @Cartea2015]
 
 - PIN/VPIN [@Easley1996, @Easley2012a]
+
+## Introduction
 
 - Price pressure [@Hendershott2014, @Cont2014]
 
@@ -56,6 +60,38 @@ load.trades(system.file('extdata/ob_trades.csv',package = 'obmodeling'))
 
 - *obmodeling* uses an environment to store parsed trades and quotes
 - you can access that environment via `getOB()`
+- currently supports Reuters data format, more to come
+
+## Calling Functions
+
+```{r, echo=TRUE}
+
+head(effective.spread('ESH6', store=TRUE),2)
+
+```
+
+- When applicable functions contain a store function, saving the data in the environment
+
+```{r, echo=TRUE}
+
+ob <- getOB()
+names(ob$ESH6)
+
+```
+
+## Current Functions
+
+- bidask.changes
+- effective.spread
+- load.quotes
+- load.trades
+- market.depth.stats
+- quoted.spread
+- ticks.wide
+- trade.imbalance
+- trade.size.stats
+- vpin
+- wmp
 
 ## Visualize Order Book
 
@@ -65,13 +101,15 @@ chart.depth('ESH6')
 
 ```
 
-## Pretty Pictures 2
+## Future Visalizations
 
+![Orderbook through time](figures/obthroughtime.png){width=50%}
 
+## Future Analysis
 
-## Pretty Pictures 3
+- Market Toxicity Measures
 
-
+- Event Analysis [@Almgren2012]
 
 ## Thanks
 
