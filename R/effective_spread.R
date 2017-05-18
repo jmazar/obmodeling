@@ -20,7 +20,7 @@ effective.spread <- function(symbol, store=FALSE) {
   trades.inside$L1.BidPrice <- na.locf(trades.inside$L1.BidPrice)
   trades.inside$side <- ifelse(trades.inside$Price == trades.inside$L1.AskPrice, 1, -1)
   eff.spread <- 2 * trades.inside$side * (trades.inside$Price - (trades.inside$L1.AskPrice + trades.inside$L1.BidPrice) / 2)
-  eff.spread <- na.omit(effective.spread)
+  eff.spread <- na.omit(eff.spread)
   colnames(eff.spread) <- 'effective.spread'
   if(store)
     .ob[[symbol]]$effective.spread <- eff.spread
@@ -35,4 +35,3 @@ effective.spread <- function(symbol, store=FALSE) {
 # for full details see https://www.gnu.org/licenses/licenses.en.html
 #
 ###############################################################################
-
