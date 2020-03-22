@@ -6,8 +6,8 @@ quoted.spread <- function(symbol, store=FALSE) {
   q.spread <- (quotes$L1.AskPrice - quotes$L1.BidPrice)
   colnames(q.spread) <- 'quoted.spread'
   if(store)
-    .ob[[symbol]]$quoted.spread <- quoted.spread
-  quoted.spread
+    .ob[[symbol]]$quoted.spread <- q.spread
+  return(q.spread)
 }
 
 ###############################################################################
