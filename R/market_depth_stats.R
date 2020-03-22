@@ -1,4 +1,4 @@
-#' generate descriptive statistics and quantiles for L2 market depth
+#' generate descriptive statistics and quantiles for L1 market depth
 #'
 #' @param symbol string defining the symbol to analyze
 #' @param on timespan to use for segmenting differences, using [xts::endpoints]
